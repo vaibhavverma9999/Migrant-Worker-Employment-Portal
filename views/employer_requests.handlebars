@@ -1,0 +1,25 @@
+<div class="container" style="top:70px;">
+<header>
+<h1>Job Requests </h1>
+<h3>Employer Id {{emp_id}}</h3> <br>
+</header>
+<button type="button" class="butt butt1" id="submit"><a href="/employer/jobs">Posted Jobs</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/employer/requests">Requests</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/employer/confirmed">Confirmed</a></button>
+<button style="float:right" type="button" class="butt butt1" id="submit"><a href="/employer/logout">Logout</a></button>
+<table class="custom">
+<thead>
+    <tr>
+        <th>EmpID</th><th>Type of Work</th><th>Duration</th><th>Wage</th><th>Location</th><th>WorkerId</th><th>Worker Name</th><th>Worker Age</th><th>Worker Gender</th><th>Worker Phone No.</th><th>Confirm Job</th>
+    </tr>
+	</thead>
+	<tbody>
+    {{#each requests}}
+    <tr>
+        <td>{{this.emp_id}}</td><td>{{this.type_work}}</td><td>{{this.duration.days}} Days, {{this.duration.months}} Months</td><td>{{this.wage}}</td><td>{{this.location}}</td><td>{{this.worker_id}}</td><td>{{this.worker_name}}</td><td>{{this.worker_age}}</td><td>{{this.worker_gender}}</td><td>{{this.worker_phone}}</td><td><form action="/employer/confirm_request" method="POST"><input hidden type="text" name="jobs_id" value={{this._id}}> <input type="submit" value="Confirm" name="employer-confirm-job"></form></td>
+    </tr>
+    {{/each}}
+	</tbody>
+</table>    
+<br>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "migrant-employment-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

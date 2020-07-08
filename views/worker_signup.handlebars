@@ -1,0 +1,90 @@
+        <script> 
+          
+            // Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.worker_pwd.value; 
+                password2 = form.repassword.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Welcome!") 
+                    return true; 
+                } 
+            } 
+        </script> 
+
+<div class="container" style="top:70px;">
+			<header>
+				<h1>Worker Sign-Up</h1>
+            </header>       
+      <div  class="form">
+    		<form id="contactform" action="/worker/signup" onsubmit="checkPassword(this)" method="POST">
+				<p class="contact"><label for="worker_id"></label>
+				<input id="worker_id" name="worker_id" placeholder="Enter Worker ID" required="" type="text">
+				
+    			<p class="contact"><label for="worker_name">Name</label></p> 
+    			<input id="name" name="worker_name" placeholder="First and Last name" required="" tabindex="1" type="text"> 
+ 
+				<p class="contact"><label for="worker_phone">Mobile phone</label></p> 
+				<input id="phone" name="worker_phone" placeholder="Phone number" minlength="10" required="" type="text"> <br> 
+				<p class="contact"><label for="worker_altphone">Alternate Mobile phone</label></p> 
+				<input id="phone" name="worker_altphone" placeholder="Alternate phone number" minlength="10" required="" type="text"> <br> 
+
+    			<p class="contact"><label for="worker_aadhaar">Aadhaar Number</label></p> 
+    			<input id="name" name="worker_aadhaar" placeholder="Enter your Aadhaar Number" required="" tabindex="1" type="text">
+
+    			<p class="contact"><label for="worker_ae">Age</label></p> 
+    			<input id="age" name="worker_age" placeholder="Enter your Age" min="18" max="60" required="" tabindex="1" type="number">
+				
+                <p class="contact"><label for="worker_pwd">Create a password</label></p> 
+    			<input type="password" id="password" name="worker_pwd" required=""> 
+                <p class="contact"><label for="repassword">Confirm your password</label></p> 
+    			<input type="password" id="repassword" name="repassword" required=""> 
+
+            <select class="select-style gender" name="worker_gender">
+            <option value="select">Gender...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            </select><br><br>
+            
+            <input class="buttom" name="worker-signup" id="submit" tabindex="5" value="Sign me up!" type="submit"> 	 
+   </form> 
+</div>   
+</div>  
+
+
+
+
+<!--<h2>Worker Sign Up</h2>
+<form action="/worker/signup" method="POST">
+    Worker ID: <input type="text" name="worker_id" placeholder="Enter Worker ID"> <br>
+    Worker Name: <input type="text" name="worker_name" placeholder="Enter Worker Name"> <br>
+    Phone No.: <input type="number" name="worker_phone" placeholder="Enter Phone Number"> <br>
+    Alternate Phone No.: <input type="number" name="worker_altphone" placeholder="Enter Phone Number"> <br>
+    Aadhaar No.: <input type="text" name="worker_aadhaar" placeholder="Enter Aadhaar"> <br>
+    Password: <input type="password" name="worker_pwd" placeholder="***********"> <br>
+    Age: <input type="number" name="worker_age" placeholder="Enter Age"> <br>
+    Gender: <input type="radio" id="male" name="worker_gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="worker_gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="worker_gender" value="other">
+        <label for="other">Other</label> <br />
+    <button type="submit" name="worker-signup">Sign Up</button>
+</form>-->

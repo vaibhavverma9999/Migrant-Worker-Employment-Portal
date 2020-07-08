@@ -1,0 +1,25 @@
+.butt {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.butt1 {
+  background-color: #6c7ae0;
+  color: white;
+  border: 1px solid black;
+}
+
+.butt1:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}

@@ -1,0 +1,41 @@
+table.custom {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  border: 2px solid #000000;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.custom td, table.custom th {
+  border: 0px solid #4A4A4A;
+  padding: 3px 6px;
+}
+table.custom tbody td {
+  font-size: 15px;
+  color: #000000;
+}
+table.custom tr:nth-child(even) {
+  background: #E6F1F1;
+}
+table.custom thead {
+  background: #6C7AE0;
+  background: -moz-linear-gradient(top, #919be8 0%, #7a87e3 66%, #6C7AE0 100%);
+  background: -webkit-linear-gradient(top, #919be8 0%, #7a87e3 66%, #6C7AE0 100%);
+  background: linear-gradient(to bottom, #919be8 0%, #7a87e3 66%, #6C7AE0 100%);
+  border-bottom: 2px solid #000000;
+}
+table.custom thead th {
+  font-size: 17px;
+  font-weight: normal;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 0px solid #FFFFFF;
+}
+table.custom thead th:first-child {
+  border-left: none;
+}
+
+table.custom tfoot td {
+  font-size: 12px;
+}

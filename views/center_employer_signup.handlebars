@@ -1,0 +1,100 @@
+        <script> 
+          
+            // Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.emp_pwd.value; 
+                password2 = form.repassword.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Welcome!") 
+                    return true; 
+                } 
+            } 
+        </script> 
+	
+<div class="container" style="top:70px;">
+			<header>
+				<h1>Employer Sign-Up</h1>
+            </header>  
+      <div  class="form">
+    		<form id="contactform" action="/center/employer/signup" onSubmit ="return checkPassword(this)" method="POST">
+				<p class="contact"><label for="emp_id"></label>
+				<input id="emp_id" name="emp_id" placeholder="Enter Employer ID" required="" type="text">
+				
+    			<p class="contact"><label for="emp_name">Name</label></p> 
+    			<input id="name" name="emp_name" placeholder="First and last name" required="" tabindex="1" type="text"> 
+ 
+				<p class="contact"><label for="emp_phone">Mobile phone</label></p> 
+				<input id="phone" name="emp_phone" placeholder="phone number" minlength="10" required="" type="text"> <br> 
+
+    			<p class="contact"><label for="emp_address">Address</label></p> 
+    			<input id="name" name="emp_address" placeholder="Enter your Address" required="" tabindex="1" type="text"> 
+
+    			<p class="contact"><label for="emp_aadhaar">Aadhaar Number</label></p> 
+    			<input id="name" name="emp_aadhaar" placeholder="Enter your Aadhaar Number" required="" tabindex="1" type="text">
+				
+                <p class="contact"><label for="emp_pwd">Create a password</label></p> 
+    			<input type="password" id="password" name="emp_pwd" required=""> 
+                <p class="contact"><label for="repassword">Confirm your password</label></p> 
+    			<input type="password" id="repassword" name="repassword" required=""> 
+
+				<p class="contact"><label for="emp_email">Email</label></p> 
+    			<input id="email" name="emp_email" placeholder="example@domain.com" required="" type="email"> 
+                
+				<p class="contact"><label for="emp_dob">Date Of Birth</label></p> 
+    			<input id="email" name="emp_dob" placeholder="Date Of Birth" required="" type="date"> 	
+  
+            <select class="select-style gender" name="emp_gender">
+            <option value="select">Gender...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            </select><br><br>
+            
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!" type="submit"> 	 
+   </form> 
+</div>
+<br>
+<div style="text-align:center">
+<button class="butt butt1" type="button"><a href="/center/home">Center Home Page</a></button>
+</div> 
+</div>
+			
+		
+		
+			
+<!--			
+<form action="/center/employer/signup" method="POST">
+    Employer ID: <input type="text" name="emp_id" placeholder="Enter Employer ID"> <br>
+    Employer Name: <input type="text" name="emp_name" placeholder="Enter Employer Name"> <br>
+    Phone No.: <input type="number" name="emp_phone" placeholder="Enter Phone Number"> <br>
+    Address: <input type="text" name="emp_address" placeholder="Enter Address"> <br>
+    Aadhaar No.: <input type="text" name="emp_aadhaar" placeholder="Enter Aadhaar"> <br>
+    Password: <input type="password" name="emp_pwd" placeholder="***********"> <br>
+    Mail: <input type="mail" name="emp_email" placeholder="Enter Email Id"> <br>
+    DOB: <input type="date" name="emp_dob" placeholder="DOB"> <br>
+    <label for="male">Male</label>
+    <input type="radio" name="emp_gender" value="male">
+    <label for="female">Female</label>
+    <input type="radio" name="emp_gender" value="female">
+    <label for="other">Other</label>
+    <input type="radio" name="emp_gender" value="other"> <br>
+    <button type="submit" name="employer-signup">Sign Up</button>
+    <button type="button"><a href="/center/home">Home Page</a></button>
+</form>-->

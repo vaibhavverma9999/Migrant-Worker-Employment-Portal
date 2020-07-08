@@ -1,0 +1,30 @@
+<div class="container" style="top:70px;">
+<header>
+<h1>Jobs Posted</h1>
+</header>
+<table class="custom">
+<thead>
+    <tr>
+        <th style="margin-right: 100px;">EmpID</th>
+        <th style="margin-right: 20px;">Type of Work</th>
+        <th style="margin-right: 20px;">Duration</th>
+        <th style="margin-right: 20px;">Wage</th>
+        <th style="margin-right: 20px;">Location</th>
+    </tr>
+	</thead>
+	<tbody>
+    {{#each jobsposted1}}
+    <tr>
+        <td style="margin-right: 20px;">{{this.emp_id}}</td>
+        <td style="margin-right: 20px;">{{this.type_work}}</td>
+        <td style="margin-right: 20px;">{{this.duration.days}} Days, {{this.duration.months}} Months</td>
+        <td style="margin-right: 20px;">{{this.wage}}</td>
+        <td style="margin-right: 20px;">{{this.location}}</td>
+    </tr>
+    {{/each}}
+	</tbody>
+</table>
+<div style="text-align:center">
+<button class="butt butt1" type="button"><a href="/center/home">Center Home Page</a></button>
+</div></div><br><br>
+<br>  

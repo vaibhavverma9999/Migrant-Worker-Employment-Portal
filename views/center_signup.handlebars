@@ -1,0 +1,64 @@
+<div class="container" style="top:70px;">
+			<header>
+				<h1>Center Sign-Up</h1>
+            </header>       
+      <div  class="form">
+    		<form id="contactform" action="/center/signup" method="POST">
+				<p class="contact"><label for="center_id"></label>
+				<input id="center_id" name="center_id" placeholder="Enter Center ID" required="" type="text">
+				
+    			<p class="contact"><label for="center_name">Name</label></p> 
+    			<input id="name" name="center_name" placeholder="Enter Center Name" required="" tabindex="1" type="text"> 
+ 
+				<p class="contact"><label for="center_phone">Mobile phone</label></p> 
+				<input id="phone" name="center_phone" placeholder="Center phone number" minlength="10" required="" type="text"> <br> 
+
+    			<p class="contact"><label for="center_address">Address</label></p> 
+    			<input id="name" name="center_address" placeholder="Enter the Address" required="" tabindex="1" type="text"> 
+
+    			<p class="contact"><label for="center_aadhaar">Aadhaar Number</label></p> 
+    			<input id="name" name="center_aadhaar" placeholder="Enter your Aadhaar Number" required="" tabindex="1" type="text">
+				
+                <p class="contact"><label for="center_pwd">Create a password</label></p> 
+    			<input type="password" id="password" name="center_pwd" required=""> 
+
+				<p class="contact"><label for="center_email">Email</label></p> 
+    			<input id="email" name="center_email" placeholder="example@domain.com" required="" type="email"> 
+                
+				<p class="contact"><label for="center_dob">Date Of Birth</label></p> 
+    			<input id="email" name="center_dob" placeholder="Date Of Birth" required="" type="date"> 	
+  
+            <select class="select-style gender" name="center_gender">
+            <option value="select">Gender...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            </select><br><br>
+            
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign up!" type="submit"> 	 
+   </form> 
+</div>   
+</div> 
+
+
+
+<!--<h2>center Sign Up</h2>
+<form action="/center/signup" method="POST">
+    center ID: <input type="text" name="center_id" placeholder="Enter center ID"> <br>
+    center Name: <input type="text" name="center_name" placeholder="Enter center Name"> <br>
+    Phone No.: <input type="number" name="center_phone" placeholder="Enter Phone Number"> <br>
+    Address: <input type="text" name="center_address" placeholder="Enter Address"> <br>
+	
+	
+    Aadhaar No.: <input type="text" name="center_aadhaar" placeholder="Enter Aadhaar"> <br>
+    Password: <input type="password" name="center_pwd" placeholder="***********"> <br>
+    Mail: <input type="mail" name="center_email" placeholder="Enter Email Id"> <br>
+    DOB: <input type="date" name="center_dob" placeholder="DOB"> <br>
+    <label for="male">Male</label>
+    <input type="radio" name="center_gender" value="male">
+    <label for="female">Female</label>
+    <input type="radio" name="center_gender" value="female">
+    <label for="other">Other</label>
+    <input type="radio" name="center_gender" value="other"> <br>
+    <button type="submit" name="center-signup">Sign Up</button>
+</form>-->

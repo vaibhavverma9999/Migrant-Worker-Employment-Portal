@@ -1,0 +1,46 @@
+<div class="container" style="top:70px;">
+<header>
+<h1>Confirmed Jobs </h2>
+<h3>Worker Id: {{worker}} Name: {{workername}}</h3><br/>
+</header>
+<button type="button" class="butt butt1" id="submit"><a href="/worker/jobs">Available Jobs</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/worker/applied">Applied Jobs</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/worker/confirmed">Confirmed Jobs</a></button>
+<button style="float:right" type="button" class="butt butt1" id="submit"><a href="/worker/logout">Logout</a></button>
+<table class="custom">
+<thead>
+    <tr>
+        <th>EmpID</th>
+        <th>Emp Name</th>
+        <th>WorkerId</th>
+        <th>Worker Name</th>
+        <th>Duration</th>
+        <th>Wage</th>
+        <th>Location</th>
+        <th>Worker Gender</th>
+        <th>Worker Age</th>
+        <th>Worker Phone No.</th>
+        <th>Type of Work</th>
+        <th>Confirm Job</th>
+    </tr>
+	</thead>
+	<tbody>
+    {{#each final}}
+    <tr>
+        <td>{{this.emp_id}}</td>
+        <td>{{this.emp_name}}</td>
+		<td>{{this.worker_id}}</td>
+		<td>{{this.worker_name}}</td>
+		<td>{{this.duration.days}} Days, {{this.duration.months}} Months</td>
+		<td>{{this.wage}}</td>
+		<td>{{this.location}}</td>
+        <td>{{this.worker_gender}}</td>
+        <td>{{this.worker_age}}</td>
+        <td>{{this.worker_phone}}</td>
+        <td>{{this.type_work}}</td>
+        <td>{{confirm}}</td>
+    </tr>
+    {{/each}}
+	</tbody>
+</table>    
+</div>

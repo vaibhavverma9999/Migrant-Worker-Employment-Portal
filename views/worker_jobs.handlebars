@@ -1,0 +1,40 @@
+<div class="container" style="top:70px;">
+			<header>
+				<h1>Job Openings</h1>
+				<h3>Worker Id: {{worker}} Name: {{workername}}</h3><br/>
+            </header> 	
+<button type="button" class="butt butt1" id="submit"><a href="/worker/jobs">Available Jobs</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/worker/applied">Applied Jobs</a></button>
+<button type="button" class="butt butt1" id="submit"><a href="/worker/confirmed">Confirmed Jobs</a></button>
+<button style="float:right" type="button" class="butt butt1" id="submit"><a href="/worker/logout">Logout</a></button>
+
+<table class="custom">
+	<thead>
+    <tr>
+        <th>EmpID</th>
+        <th>Emp Name</th>
+        <th>Type of Work</th>
+        <th>Duration</th>
+        <th>Wage</th>
+        <th>Location</th>
+        <th>Send Request</th>
+    </tr>
+	</thead>
+	<tbody>
+    {{#each jobsposted}}
+    <tr>
+        <td>{{this.emp_id}}</td>
+        <td>{{this.emp_name}}</td>
+        <td>{{this.type_work}}</td>
+        <td>{{this.duration.days}} Days, {{this.duration.months}} Months</td>
+        <td>{{this.wage}}</td>
+        <td>{{this.location}}</td>
+        <td><form action="/worker/send_request" method="POST"> 
+        <input hidden type="text" name="emp_id" value={{this.emp_id}}> 
+        <input hidden type="text" name="jobs_id" value={{this._id}}>
+        <input type="submit" value="Request" name="send_request"></form></td>
+    </tr>
+    {{/each}}
+	</tbody>
+</table>    
+</div>
